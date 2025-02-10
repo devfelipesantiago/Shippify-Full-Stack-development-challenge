@@ -1,7 +1,7 @@
-const express = require("express")
-const vehicleController = require("../controllers/vehicleController")
+const express = require('express');
+const vehicleController = require('../controllers/vehicleController');
 
-const router = express.Router()
+const router = express.Router();
 
 /**
  * @swagger
@@ -29,7 +29,7 @@ const router = express.Router()
  *               items:
  *                 $ref: '#/components/schemas/Vehicle'
  */
-router.get("/:companyId/:driverId", vehicleController.listVehiclesByDriver)
+router.get('/:companyId/:driverId', vehicleController.listVehiclesByDriver);
 
 /**
  * @swagger
@@ -50,7 +50,7 @@ router.get("/:companyId/:driverId", vehicleController.listVehiclesByDriver)
  *             schema:
  *               $ref: '#/components/schemas/Vehicle'
  */
-router.post("/", vehicleController.createVehicle)
+router.post('/', vehicleController.createVehicle);
 
 /**
  * @swagger
@@ -73,7 +73,7 @@ router.post("/", vehicleController.createVehicle)
  *       404:
  *         description: Vehicle not found
  */
-router.get("/:id", vehicleController.getVehicleById)
+router.get('/:id', vehicleController.getVehicleById);
 
 /**
  * @swagger
@@ -100,7 +100,7 @@ router.get("/:id", vehicleController.getVehicleById)
  *             schema:
  *               $ref: '#/components/schemas/Vehicle'
  */
-router.put("/:id", vehicleController.updateVehicle)
+router.put('/:id', vehicleController.updateVehicle);
 
 /**
  * @swagger
@@ -117,7 +117,7 @@ router.put("/:id", vehicleController.updateVehicle)
  *       204:
  *         description: Vehicle deleted successfully
  */
-router.delete("/:id", vehicleController.deleteVehicle)
+router.delete('/:id', vehicleController.deleteVehicle);
 
 /**
  * @swagger
@@ -162,4 +162,4 @@ router.delete("/:id", vehicleController.deleteVehicle)
  *           type: string
  */
 
-module.exports = router
+module.exports = router;

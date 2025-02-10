@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*.test.js --exit",
+    "coverage": "nyc npm test"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,7 @@
     "swagger-ui-express": "^4.6.2"
   },
   "devDependencies": {
-    "chai": "^4.3.10",
+    "chai": "^4.5.0",
     "chai-http": "^4.4.0",
     "jest": "^27.5.1",
     "joi": "^17.6.0",
@@ -30,6 +31,7 @@
     "nodemon": "^2.0.15",
     "nyc": "^15.1.0",
     "sinon": "^14.0.2",
-    "sinon-chai": "^3.7.0"
+    "sinon-chai": "^3.7.0",
+    "supertest": "^7.0.0"
   }
 }
